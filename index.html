@@ -5,29 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Счетоводител София | В. Христова</title>
 
-<!-- Premium Modern Font -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --brand:#0b3d91;
   --brand2:#1e5bd8;
-  --accent:#22c55e;
   --bg:#f4f6f9;
   --text:#111827;
 }
 
-*{ box-sizing:border-box; }
+*{box-sizing:border-box;}
 
-body {
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
 }
 
-/* NAVIGATION */
-nav {
+/* NAV */
+nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -36,7 +34,7 @@ nav {
   border-bottom:1px solid #eee;
 }
 
-.logo {
+.logo{
   display:flex;
   align-items:center;
   gap:12px;
@@ -45,20 +43,17 @@ nav {
 .logo-box{
   width:40px;
   height:40px;
-  border-radius:12px;
+  border-radius:8px;
   background:linear-gradient(135deg,var(--brand),var(--brand2));
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
   font-weight:800;
-  font-size:18px;
-  letter-spacing:1px;
 }
 
 .logo-text{
-  font-weight:800;
-  font-size:18px;
+  font-weight:700;
 }
 
 nav a{
@@ -68,9 +63,7 @@ nav a{
   font-weight:600;
 }
 
-nav a:hover{
-  color:var(--brand2);
-}
+nav a:hover{color:var(--brand2);}
 
 /* HERO */
 .hero{
@@ -78,8 +71,6 @@ nav a:hover{
   padding:120px 20px 100px;
   color:white;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 60%),
-    radial-gradient(circle at 80% 10%, rgba(255,255,255,0.06) 0%, transparent 55%),
     repeating-linear-gradient(
       45deg,
       rgba(255,255,255,0.03),
@@ -91,10 +82,9 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:54px;
-  margin-bottom:20px;
+  font-size:52px;
   font-weight:800;
-  letter-spacing:-1px;
+  margin-bottom:20px;
 }
 
 .hero p{
@@ -109,17 +99,17 @@ nav a:hover{
   padding:16px 34px;
   background:white;
   color:var(--brand);
-  font-weight:800;
+  font-weight:700;
   text-decoration:none;
-  border-radius:14px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.2);
-  transition:0.2s;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
 .cta:hover{
   transform:translateY(-2px);
 }
 
+/* SECTIONS */
 section{
   padding:90px 8%;
 }
@@ -131,7 +121,6 @@ section{
 
 .section-title h2{
   font-size:34px;
-  margin-bottom:10px;
   font-weight:800;
 }
 
@@ -144,10 +133,10 @@ section{
 .service-card{
   background:white;
   padding:40px 30px;
-  border-radius:18px;
+  border-radius:14px;
   text-align:center;
-  box-shadow:0 15px 40px rgba(0,0,0,0.06);
-  transition:0.25s;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  transition:0.2s;
 }
 
 .service-card:hover{
@@ -155,15 +144,15 @@ section{
 }
 
 .icon-circle{
-  width:75px;
-  height:75px;
+  width:70px;
+  height:70px;
   border-radius:50%;
   margin:0 auto 20px;
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
-  font-size:30px;
+  font-size:26px;
   background:linear-gradient(135deg,var(--brand),var(--brand2));
 }
 
@@ -181,17 +170,16 @@ section{
 /* ABOUT */
 .about{
   background:white;
-  border-radius:20px;
+  border-radius:14px;
   padding:60px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.05);
   max-width:900px;
   margin:0 auto;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
   text-align:center;
 }
 
 .about h3{
   font-size:24px;
-  margin-bottom:15px;
   font-weight:800;
 }
 
@@ -204,11 +192,11 @@ section{
 .contact{
   text-align:center;
   background:white;
-  border-radius:20px;
+  border-radius:14px;
   padding:60px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.05);
   max-width:800px;
   margin:0 auto;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
 }
 
 footer{
@@ -253,16 +241,29 @@ footer{
   </div>
 
   <div class="services-grid">
+
     <div class="service-card">
       <div class="icon-circle">📊</div>
       <h3>ДДС декларации</h3>
-      <p>Изготвяне и подаване на месечни декларации.</p>
+      <p>Изготвяне и подаване на месечни ДДС декларации.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">💰</div>
+      <h3>Възстановяване на ДДС</h3>
+      <p>Подготовка на документи за данъчен кредит.</p>
     </div>
 
     <div class="service-card">
       <div class="icon-circle">💼</div>
       <h3>ТРЗ / Пейрол</h3>
-      <p>Заплати, осигуровки и трудови договори.</p>
+      <p>Заплати, ведомости, осигуровки и трудови договори.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📁</div>
+      <h3>Текущо счетоводно обслужване</h3>
+      <p>Осчетоводяване на фактури и счетоводни документи.</p>
     </div>
 
     <div class="service-card">
@@ -270,6 +271,13 @@ footer{
       <h3>Данъчни декларации</h3>
       <p>Годишни декларации за юридически и физически лица.</p>
     </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📅</div>
+      <h3>Годишно приключване</h3>
+      <p>Изготвяне на финансови отчети и годишни баланси.</p>
+    </div>
+
   </div>
 </section>
 
