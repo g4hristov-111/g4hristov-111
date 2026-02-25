@@ -9,31 +9,30 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #ffffff;
+    background: #f4f6f9;
     color: #1a1a1a;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10%;
+    align-items: center;
+    padding: 20px 8%;
     background: white;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eaeaea;
 }
 
 nav a {
     text-decoration: none;
-    color: #1a1a1a;
-    margin-left: 20px;
+    color: #333;
+    margin-left: 25px;
     font-weight: 500;
 }
 
 .hero {
     text-align: center;
-    padding: 120px 20px;
-    background: linear-gradient(to right, #0b3d91, #1e5bd8);
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #0b3d91, #1e5bd8);
     color: white;
 }
 
@@ -44,12 +43,13 @@ nav a {
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 30px;
+    opacity: 0.95;
 }
 
 .cta {
     display: inline-block;
-    padding: 15px 30px;
+    margin-top: 30px;
+    padding: 15px 32px;
     background: white;
     color: #0b3d91;
     font-weight: bold;
@@ -63,26 +63,65 @@ nav a {
 }
 
 section {
-    padding: 80px 10%;
+    padding: 90px 8%;
 }
 
-.services {
-    background: #f8f9fc;
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.service-box {
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
     background: white;
-    padding: 25px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #0b3d91;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #555;
 }
 
 .contact {
     text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 60px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 footer {
+    margin-top: 80px;
     background: #111;
     color: white;
     text-align: center;
@@ -96,7 +135,6 @@ footer {
 
     nav {
         flex-direction: column;
-        align-items: center;
     }
 }
 </style>
@@ -113,26 +151,63 @@ footer {
 
 <div class="hero">
     <h1>Счетоводител в София</h1>
-    <p>Професионално счетоводно обслужване за вашия бизнес.</p>
+    <p>Професионално обслужване за фирми и свободни професии.</p>
     <a href="#contact" class="cta">Безплатна консултация</a>
 </div>
 
-<section id="services" class="services">
-    <h2>Нашите услуги</h2>
+<section id="services">
+    <div class="section-title">
+        <h2>Пълен набор от счетоводни услуги</h2>
+    </div>
 
-    <div class="service-box">Пълно счетоводно обслужване</div>
-    <div class="service-box">ТРЗ и личен състав</div>
-    <div class="service-box">Регистрация на фирма</div>
-    <div class="service-box">ДДС регистрация</div>
-    <div class="service-box">Годишни финансови отчети</div>
-    <div class="service-box">Данъчни консултации</div>
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="icon-circle">📊</div>
+            <h3>ДДС декларации</h3>
+            <p>Изготвяне и подаване на месечни ДДС декларации по електронен път.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-circle">💼</div>
+            <h3>ТРЗ / Пейрол</h3>
+            <p>Администриране на заплати, осигуровки и трудови договори.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-circle">📁</div>
+            <h3>Текущо обслужване</h3>
+            <p>Осчетоводяване на фактури и цялостно счетоводно управление.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-circle">📝</div>
+            <h3>Данъчни декларации</h3>
+            <p>Годишни декларации за юридически и физически лица.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-circle">📅</div>
+            <h3>Годишно приключване</h3>
+            <p>Изготвяне на финансови отчети и годишни баланси.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-circle">🏢</div>
+            <h3>Регистрация на фирма</h3>
+            <p>Пълно съдействие при стартиране на нов бизнес.</p>
+        </div>
+
+    </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Свържете се с нас</h2>
-    <p>📍 София, България</p>
-    <p>📞 0888 777 879</p>
-    <p>✉ info@vh-hristova.bg</p>
+<section id="contact">
+    <div class="contact">
+        <h2>Свържете се с нас</h2>
+        <p>📍 София, България</p>
+        <p>📞 0888 777 879</p>
+        <p>✉ info@vh-hristova.bg</p>
+    </div>
 </section>
 
 <footer>
