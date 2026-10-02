@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакти | Счетоводна кантора В. Христова — София</title>
-<meta name="description" content="Свържете се със Счетоводна кантора В. Христова в София за безплатна консултация.">
+<title>Контакти и безплатна консултация | VH Счетоводство</title>
+<meta name="description" content="Свържете се с VH Счетоводство и бизнес услуги в София — обадете се или изпратете запитване. Първоначалната консултация е безплатна.">
 <link rel="canonical" href="https://vhhristova.bg/contact.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Счетоводна кантора В. Христова">
-<meta property="og:title" content="Контакти | Счетоводна кантора В. Христова — София">
-<meta property="og:description" content="Свържете се със Счетоводна кантора В. Христова в София за безплатна консултация.">
+<meta property="og:site_name" content="VH | Счетоводство и бизнес услуги">
+<meta property="og:title" content="Контакти и безплатна консултация | VH Счетоводство">
+<meta property="og:description" content="Свържете се с VH Счетоводство и бизнес услуги в София — обадете се или изпратете запитване. Първоначалната консултация е безплатна.">
 <meta property="og:url" content="https://vhhristova.bg/contact.html">
 <meta property="og:locale" content="bg_BG">
 <meta name="twitter:card" content="summary">
@@ -20,13 +20,13 @@
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">
-      <span class="brand-eyebrow">Счетоводна кантора</span>
-      <span class="brand-name">В. Христова</span>
+      <span class="brand-eyebrow">Счетоводство и бизнес услуги</span>
+      <span class="brand-name">VH</span>
     </a>
     <nav class="nav-links">
       <a href="index.html" data-page="index.html">Начало</a>
       <a href="services.html" data-page="services.html">Услуги</a>
-      <a href="about.html" data-page="about.html">За нас</a>
+      <a href="about.html" data-page="about.html">За мен</a>
       <a href="contact.html" data-page="contact.html">Контакти</a>
       <a href="contact.html" class="btn nav-cta-mobile">Безплатна консултация</a>
     </nav>
@@ -39,14 +39,14 @@
 
 <div class="page-head reveal">
   <span class="eyebrow">Контакти</span>
-  <h1>Свържете се с нас</h1>
-  <p class="lede" style="margin-top:18px;">Първата консултация е безплатна — пишете, обадете се или минете през кантората.</p>
+  <h1>Свържете се с мен</h1>
+  <p class="lede" style="margin-top:18px;">Обадете се или ми изпратете запитване. Първоначалната консултация е безплатна.</p>
 </div>
 
 <section class="section" style="padding-top:24px;">
   <div class="contact-grid reveal">
     <div class="contact-cell">
-      <span class="eyebrow">Адрес</span>
+      <span class="eyebrow">Район на дейност</span>
       <span class="value">София, България</span>
     </div>
     <div class="contact-cell">
@@ -59,22 +59,71 @@
     </div>
   </div>
 
-  <div class="reveal" style="margin-top:56px;--reveal-delay:.1s">
-    <a href="mailto:viarahristova@abv.bg" class="btn">Пишете ни за безплатна консултация</a>
-  </div>
+  <form class="contact-form reveal" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" style="--reveal-delay:.1s">
+    <input type="hidden" name="form-name" value="contact">
+    <p hidden><label>Не попълвайте това поле: <input name="bot-field"></label></p>
+
+    <h2>Изпратете запитване</h2>
+    <p class="form-note">Опишете накратко какво ви трябва и ще се свържа с вас. Първата консултация е безплатна.</p>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="f-name">Име</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Телефон</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Имейл</label>
+        <input id="f-email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="f-company">Фирма / свободна професия</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization">
+      </div>
+      <div class="field full">
+        <label for="f-service">От каква услуга се интересувате?</label>
+        <select id="f-service" name="service">
+          <option value="">Изберете...</option>
+          <option>Текущо счетоводно обслужване</option>
+          <option>ДДС декларации / възстановяване на ДДС</option>
+          <option>ТРЗ / заплати и осигуровки</option>
+          <option>Данъчни декларации</option>
+          <option>Годишно приключване</option>
+          <option>Стартирам нов бизнес</option>
+          <option>Друго</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="f-message">Съобщение</label>
+        <textarea id="f-message" name="message"></textarea>
+      </div>
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" name="consent" required>
+      <span>Съгласен/а съм данните ми да бъдат обработвани, за да получа отговор на запитването си.</span>
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="btn">Искам безплатна консултация</button>
+    </div>
+  </form>
 </section>
 
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="brand-name">В. Христова</span>
-      <p>Счетоводна кантора в София — пълно счетоводно обслужване за фирми и свободни професии.</p>
+      <span class="brand-name">VH | Счетоводство и бизнес услуги</span>
+      <p>Счетоводство и бизнес услуги в София — пълно счетоводно обслужване за фирми и свободни професии.</p>
     </div>
     <div class="footer-col">
       <h4>Навигация</h4>
       <a href="index.html">Начало</a>
       <a href="services.html">Услуги</a>
-      <a href="about.html">За нас</a>
+      <a href="about.html">За мен</a>
       <a href="contact.html">Контакти</a>
     </div>
     <div class="footer-col">
@@ -85,7 +134,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Счетоводна кантора В. Христова</span>
+    <span>© 2026 VH | Счетоводство и бизнес услуги</span>
   </div>
 </footer>
 
