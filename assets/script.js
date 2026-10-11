@@ -51,3 +51,52 @@
     revealEls.forEach(function(el){ io.observe(el); });
   }
 })();
+
+/* ===== Google Ads conversions + cookie consent ===== */
+(function(){
+  // Етикети на реализациите от Google Ads (попълват се, когато се създадат действията)
+  var CONVERSIONS = {
+    lead:  '',   // изпратено запитване (страница „Благодаря“)
+    phone: ''    // клик по телефонния номер
+  };
+  var AW = 'AW-18490693279';
+
+  function track(kind){
+    if(typeof gtag !== 'function') return;
+    if(CONVERSIONS[kind]) gtag('event','conversion',{send_to: AW + '/' + CONVERSIONS[kind]});
+    gtag('event', kind === 'lead' ? 'generate_lead' : 'phone_click');
+  }
+
+  if(document.body && document.body.getAttribute('data-conversion') === 'lead') track('lead');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if(a) track('phone');
+  });
+
+  // cookie banner
+  var stored = null;
+  try{ stored = localStorage.getItem('vh-consent'); }catch(e){}
+  if(stored) return;
+
+  var bar = document.createElement('div');
+  bar.className = 'cookie-bar';
+  bar.setAttribute('role','dialog');
+  bar.setAttribute('aria-label','Бисквитки');
+  bar.innerHTML =
+    '<p>Използваме бисквитки, за да измерваме ефективността на рекламите си. Можете да ги приемете или откажете.</p>' +
+    '<div class="cookie-actions">' +
+      '<button type="button" class="btn outline" data-choice="denied">Отказвам</button>' +
+      '<button type="button" class="btn" data-choice="granted">Приемам</button>' +
+    '</div>';
+  document.body.appendChild(bar);
+
+  bar.addEventListener('click', function(e){
+    var choice = e.target.getAttribute && e.target.getAttribute('data-choice');
+    if(!choice) return;
+    try{ localStorage.setItem('vh-consent', choice); }catch(err){}
+    if(choice === 'granted' && typeof gtag === 'function'){
+      gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+    }
+    bar.remove();
+  });
+})();
